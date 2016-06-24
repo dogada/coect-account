@@ -1,0 +1,65 @@
+{
+  "name": "coect-account",
+  "version": "0.1.0",
+  "description": "User model and social logins for Coect web-sites.",
+  "main": "server/index.js",
+  "browser": "client/index.js",
+  "browserify": {
+    "transform": [
+      "riotify",
+      "babelify",
+      "browserify-versionify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {},
+  "scripts": {
+    "test": "npm run test:client",
+    "lint": "jshint server/ client/",
+    "validate": "npm ls",
+    "check": "npm run lint && npm run test"
+  },
+  "keywords": [
+    "coect",
+    "account"
+  ],
+  "author": "Dmytro V. Dogadailo <dvd@dogada.org>",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "debug": "~2.2.0",
+    "lodash": "~4.13.1",
+    "passport": "~0.3.2",
+    "passport-facebook": "~2.1.1",
+    "passport-google": "~0.3.0",
+    "passport-google-oauth": "~1.0.0",
+    "passport-local": "~1.0.0",
+    "passport-twitter": "~1.0.4",
+    "tflow": "^0.4.1"
+  },
+  "peerDependencies": {
+    "wpml": "0.x",
+    "coect": "0.x",
+    "riot": "2.3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogada/coect-admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dogada/coect-admin/issues"
+  },
+  "homepage": "http://www.coect.net/",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "riot": "2.3.x",
+    "riotify": "~1.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "build",
+    "test"
+  ]
+}
