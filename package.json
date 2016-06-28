@@ -14,7 +14,7 @@
   },
   "browserify-shim": {},
   "scripts": {
-    "test": "npm run test:client",
+    "test": "npm run lint",
     "lint": "jshint server/ client/",
     "validate": "npm ls",
     "check": "npm run lint && npm run test"
@@ -44,10 +44,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dogada/coect-admin.git"
+    "url": "git+https://github.com/dogada/coect-account.git"
   },
   "bugs": {
-    "url": "https://github.com/dogada/coect-admin/issues"
+    "url": "https://github.com/dogada/coect-account/issues"
   },
   "homepage": "http://www.coect.net/",
   "directories": {
