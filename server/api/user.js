@@ -7,6 +7,6 @@ exports.list = function(req, res, next) {
   const db = req.app.db
   var flow = tflow([
     () => db.User.find({orderBy: ['id', 'asc'], limit: 100}, flow),
-    (users) => flow.next({items: users})
+    (users) => flow.next({users})
   ], next)
 }
