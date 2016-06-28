@@ -1,7 +1,7 @@
 <account-userlist>
   <div class="coect-user-list">
     <ul class="list-inline">
-      <li each={ u in state.items }>
+      <li each={ u in opts.users }>
         <div class="media">
           <div class="media-left">
             <img class="media-object pull-left" width="32" height="32" 
@@ -20,8 +20,6 @@
 
   <script>
    this.mixin('coect-account')
-   var tag = this
-   if (!tag.getState()) tag.app.user.list(tag)
   </script>
 
 </account-userlist>
